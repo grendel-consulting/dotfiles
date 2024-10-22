@@ -1,0 +1,42 @@
+export DOTSCRIPTS="$HOME/.scripts"
+export EDITOR="nano"
+export VISUAL="code --wait"
+export PAGER="less"
+
+export NVM_AUTO_USE=true
+export TF_PRODUCT="terraform"
+export ZOXIDE_CMD_OVERRIDE="cd"
+
+source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
+
+zstyle :omz:plugins:iterm2 shell-integration yes
+antigen use oh-my-zsh
+
+antigen bundle aws
+antigen bundle colored-man-pages
+antigen bundle command-not-found
+# antigen bundle direnv
+antigen bundle fzf
+antigen bundle iterm2
+antigen bundle git
+antigen bundle starship
+antigen bundle sublime
+antigen bundle tldr
+antigen bundle zoxide
+
+# antigen bundle atuinsh/atuin
+antigen bundle zsh-users/zsh-apple-touchbar
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle lukechilds/zsh-nvm
+antigen apply
+
+source $HOME/.config/op/plugins.sh
+source $DOTSCRIPTS/aliases.sh
+
+eval "$(op completion zsh)"; compdef _op op
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+
+eval $(op signin --account grendel.1password.com)
