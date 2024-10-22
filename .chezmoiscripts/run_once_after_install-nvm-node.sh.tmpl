@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+source "${NVM_DIR}/nvm.sh"
+nvm install 'lts/iron'
+
+echo "Defaulting to Node $(node -v)" # with the side-effect of ensuring nvm loads node once

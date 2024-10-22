@@ -1,0 +1,40 @@
+[user]
+  name = "{{ .name }}"
+  email = "{{ .email }}"
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKG1wi5QjxJvI08BWMB5m1uz/2tW/V0wVpGnP3T0Ahlu
+
+[core]
+	editor = code --wait
+	pager = less -F -X
+	excludesFile = ~/.gitignore
+	autocrlf = input
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[diff]
+    external = difft
+
+[commit]
+  gpgsign = true
+
+[pull]
+	rebase = true
+	
+[push]
+	default = upstream
+	autoSetupRemote = true
+
+[rebase]
+	autosquash = true
+	autoStash = true
+
+[remote "origin"]
+    fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+
+[init]
+	defaultBranch = main
+

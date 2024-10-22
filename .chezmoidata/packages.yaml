@@ -1,0 +1,44 @@
+packages:
+  universal:
+    taps:
+    - 1password/tap
+    - buo/cask-upgrade
+    - warrensbox/tap
+    brews:
+    - antigen
+    # - atuin
+    - bash
+    - bash-completion
+    - bat
+    - difftastic
+    # - direnv
+    - fzf
+    - eza
+    - gh
+    - git
+    - httpie
+    - jq
+    - mas
+    - nano
+    - pnpm
+    - starship
+    - tldr
+    - uv
+    - warrensbox/tap/tfswitch
+    - yq
+    - zoxide
+    - zsh
+    casks:
+    - 1password
+    - 1password-cli
+    - alfred
+    - flux
+    - font-caskaydia-cove-nerd-font
+    - google-chrome
+    - iterm2
+    - jordanbaird-ice
+    - rectangle
+    - remember-the-milk
+    - sublime-text
+    - visual-studio-code
+    mas:

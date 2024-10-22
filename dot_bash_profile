@@ -1,0 +1,15 @@
+# Default terminal in macOS comes with bash v3 and unlikely to change; we will 
+# be running Terminal.app with a newer version of `bash` and iTerm2 with `zsh`
+#
+# MANUAL: Terminal > Settings > General and under Shell Open With select 
+#   Command and set it to /bin/bash
+#
+# MANUAL: Fonts
+#
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export EDITOR="nano"
+export VISUAL="code --wait"
+export PAGER="less"
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
