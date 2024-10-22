@@ -1,9 +1,10 @@
-export DOTSCRIPTS="$HOME/.scripts"
+export DOTSCRIPTS="$HOME/.config/shell"
 export EDITOR="nano"
 export VISUAL="code --wait"
 export PAGER="less"
 
 export NVM_AUTO_USE=true
+export SSH_AUTH_SOCK="$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 export TF_PRODUCT="terraform"
 export ZOXIDE_CMD_OVERRIDE="cd"
 
@@ -35,8 +36,12 @@ antigen apply
 source $HOME/.config/op/plugins.sh
 source $DOTSCRIPTS/aliases.sh
 
+# Enable shell completions
 eval "$(op completion zsh)"; compdef _op op
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
-eval $(op signin --account grendel.1password.com)
+# Sign-in to 1Password if no session
+if ! op whoami >/dev/null 2>&1; then
+    eval $(op signin --account grendel.1password.com)
+fi

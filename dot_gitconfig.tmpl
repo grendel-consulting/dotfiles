@@ -1,7 +1,7 @@
 [user]
   name = "{{ .name }}"
   email = "{{ .email }}"
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKG1wi5QjxJvI08BWMB5m1uz/2tW/V0wVpGnP3T0Ahlu
+  signingkey = {{ onepasswordRead "op://Employee/GitHub SSH Key/public key" "grendel.1password.com" }}
 
 [core]
 	editor = code --wait

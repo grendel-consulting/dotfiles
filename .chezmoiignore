@@ -1,3 +1,46 @@
+# Files in the source because its a public GitHub repo
 README.md
 LICENSE
 
+# Files and folders in the target managed by macOS
+.CFUserTextEncoding
+.DS_Store
+*/.DS_Store
+.Trash
+
+# Files and folders in the target that are the indirect consequence of these dotfiles, or managed by other tools
+.antigen
+.codescene
+.local
+.nvm
+.ssh/known_hosts*
+.terraform.d
+.terraform.versions
+.tldrc
+.viminfo
+.zshrc.zwc
+
+# Files and folders containing transient content
+.bash_history
+.bash_sessions
+.cache
+.lesshst
+.python_history
+.zsh_history
+.zsh_sessions
+
+# Files and folders in the target explicitly out of scope
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures/*
+!Pictures/Screenshots
+Pictures/Screenshots/*
+!Pictures/BlurryMountain.jpg
+Public
+
+# Bootstraps homebrew manually
+.zprofile

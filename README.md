@@ -31,10 +31,10 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply grendel-consulting
 Everything not handled by Chezmoi is manual; some existing todos:
 
 - Adopt sensible macOS privacy, productivity and security defaults
+- Adopt secret versioning and hashes, coupled with tagging to telegraph
 - Extract other configuration
-    - Flux, Ice, Rectangle, Terminal, iTerm2, VS Code
+    - Flux, Ice, Rectangle, iTerm2, VS Code, Chrome, Sublime
 - Adopt and configure atuin and direnv
-- Adopt other existing dotfiles
 
 You will need to sign in to various tools for their own inbuilt syncing to happen: 1Password, vscode
 
