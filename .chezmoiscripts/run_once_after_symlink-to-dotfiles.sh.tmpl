@@ -1,0 +1,7 @@
+#!/bin/bash
+from="$HOME/Workspace/Projects/dotfiles"
+to="$HOME/.local/share/chezmoi"
+
+if [[ ! -L $from ]]; then
+    ln -s $to $from
+fi

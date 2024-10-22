@@ -3,6 +3,8 @@ packages:
     taps:
     - 1password/tap
     - buo/cask-upgrade
+    - kaos/shell
+    - turbot/tap
     - warrensbox/tap
     brews:
     - antigen
@@ -10,19 +12,30 @@ packages:
     - bash
     - bash-completion
     - bat
+    - bats-core
     - difftastic
     # - direnv
     - fzf
     - eza
     - gh
     - git
+    - go
+    - golangci-lint
     - httpie
     - jq
+    - kaos/shell/bats-assert
+    - kaos/shell/bats-file
     - mas
     - nano
+    - pre-commit
     - pnpm
     - starship
+    - tflint
     - tldr
+    - trivy
+    - turbot/tap/flowpipe
+    - turbot/tap/powerpipe
+    - turbot/tap/steampipe
     - uv
     - warrensbox/tap/tfswitch
     - yq

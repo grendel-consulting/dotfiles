@@ -12,13 +12,16 @@ LICENSE
 .antigen
 .codescene
 .local
+.npm
 .nvm
 .ssh/known_hosts*
 .terraform.d
 .terraform.versions
+.tflint.d
 .tldrc
 .viminfo
 .zshrc.zwc
+go
 
 # Files and folders containing transient content
 .bash_history
@@ -41,6 +44,7 @@ Pictures/*
 Pictures/Screenshots/*
 !Pictures/BlurryMountain.jpg
 Public
+Workspace/Projects/*
 
 # Bootstraps homebrew manually
 .zprofile
