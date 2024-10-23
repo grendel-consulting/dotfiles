@@ -4,7 +4,6 @@ export VISUAL="code --wait"
 export PAGER="less"
 
 export GOBIN="$(go env GOPATH)/bin"
-
 export PATH="$GOBIN:$PATH"
 
 export NVM_AUTO_USE=true

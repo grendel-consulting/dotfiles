@@ -1,7 +1,9 @@
 #!/bin/bash
-from="$HOME/Workspace/Projects/dotfiles"
-to="$HOME/.local/share/chezmoi"
+set -euo pipefail
 
-if [[ ! -L $from ]]; then
-    ln -s $to $from
+target="$HOME/Workspace/Projects/dotfiles"
+source="$HOME/.local/share/chezmoi"
+
+if [[ ! -L $target ]]; then
+    ln -s $source $target
 fi
