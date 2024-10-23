@@ -29,6 +29,7 @@ packages:
     - nano
     - pre-commit
     - pnpm
+    - shellcheck
     - starship
     - tflint
     - tldr
@@ -45,6 +46,7 @@ packages:
     - 1password
     - 1password-cli
     - alfred
+    - docker
     - flux
     - font-caskaydia-cove-nerd-font
     - google-chrome
