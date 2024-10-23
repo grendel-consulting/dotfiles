@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euo pipefail
+
+target="$HOME/Workspace/Projects/dotfiles"
+source="$HOME/.local/share/chezmoi"
+
+if [[ ! -L $target ]]; then
+    ln -s $source $target
+fi

@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+if command -v steampipe >/dev/null 2>&1; then
+    # Ensure local steampipe database has been initialised
+    steampipe plugin list
+
+    if ! steampipe plugin list | grep -q "grendel-consulting/kolide"; then
+        steampipe plugin install grendel-consulting/kolide
+    fi
+fi

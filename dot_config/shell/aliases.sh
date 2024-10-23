@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 alias main='git checkout main && git fetch && git pull origin main && git branch --merged main | grep -v "^\* main" | xargs -n 1 -r git branch -d'
+alias remain='for repo in ~/Workspace/Projects/.* ~/Workspace/Projects/*/ ; do if [ -d "$repo/.git" ]; then ( cd $repo && echo "Refreshing --------> $repo" && main ); fi; done'
 alias uncommit='git reset HEAD~1'
 
 alias please='sudo $(fc -nl -1)' # Repeat last command with sudo

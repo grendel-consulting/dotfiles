@@ -1,0 +1,5 @@
+connection "kolide" {
+  plugin = "grendel-consulting/kolide"
+
+  api_token = "{{ onepasswordRead "op://Employee/Kolide API Token/credential" "grendel.1password.com" }}"
+}

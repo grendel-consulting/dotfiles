@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+if command -v go >/dev/null 2>&1; then
+    go install github.com/onsi/ginkgo/v2/ginkgo@latest
+else
+   echo "Error: Go is not installed or not in PATH" >&2
+   exit 1
+ fi
