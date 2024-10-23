@@ -46,6 +46,7 @@ packages:
     - 1password
     - 1password-cli
     - alfred
+    - discord
     - docker
     - flux
     - font-caskaydia-cove-nerd-font
@@ -56,4 +57,9 @@ packages:
     - remember-the-milk
     - sublime-text
     - visual-studio-code
+    - zoom
     mas:
+      - name: Slack for Desktop
+        id: 803453959
+      - name: WhatsApp Messenger
+        id: 310633997
