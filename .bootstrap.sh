@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 # Equivalent to running `sh -c "$(curl -fsLS get.chezmoi.io)" -- init grendel-consulting`
 set -euo pipefail
 
@@ -8,8 +8,10 @@ if which -s brew; then
     echo 'Homebrew already installed'
 else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo >> $HOME/.zprofile
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+    echo >> "$HOME"/.zprofile
+
+    # shellcheck disable=SC2016
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME"/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 

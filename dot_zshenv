@@ -1,0 +1,2 @@
+# Ensure we source Granted's assume command so it is properly available
+alias assume=". assume"

@@ -1,4 +1,4 @@
-# Default terminal in macOS comes with bash v3 and unlikely to change; we will 
+# Default terminal in macOS comes with bash v3 and unlikely to change; we will
 # be running Terminal.app with a newer version of `bash` and iTerm2 with `zsh`
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
