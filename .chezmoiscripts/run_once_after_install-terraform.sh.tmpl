@@ -1,7 +1,13 @@
 #!/usr/bin/env zsh
 set -euo pipefail
 
-tfswitch --latest
+if command -v tfswitch >/dev/null 2>&1; then
+    tfswitch --latest
 
-echo "Defaulting to $(terraform -v)"
-
+    if command -v terraform >/dev/null 2>&1; then
+        echo "Defaulting to $(terraform -v)"
+    fi
+else
+    echo "Error: TfSwitch is not installed or not in PATH" >&2
+    exit 1
+fi

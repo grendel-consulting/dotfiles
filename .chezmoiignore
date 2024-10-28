@@ -33,18 +33,25 @@ go
 .zsh_sessions
 
 # Files and folders in the target explicitly out of scope
+Applications
 Desktop
 Documents
 Downloads
-Library
+# Library
 Movies
 Music
 Pictures/*
-!Pictures/Screenshots
 Pictures/Screenshots/*
 !Pictures/BlurryMountain.jpg
 Public
 Workspace/Projects/*
+Workspace/Scratch/*
+
+.flowpipe
+.pipes
+.powerpipe
+.steampipe
+!.steampipe/config/kolide.spc
 
 # Bootstraps homebrew manually
 .zprofile

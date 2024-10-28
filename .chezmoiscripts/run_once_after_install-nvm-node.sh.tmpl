@@ -2,6 +2,14 @@
 set -euo pipefail
 
 source "${NVM_DIR}/nvm.sh"
-nvm install 'lts/iron'
 
-echo "Defaulting to Node $(node -v)" # with the side-effect of ensuring nvm loads node once
+if command -v nvm >/dev/null 2>&1; then
+    nvm install 'lts/iron'
+
+    if command -v node >/dev/null 2>&1; then
+        echo "Defaulting to Node $(node -v)" # with the side-effect of ensuring nvm loads node once
+    fi
+else
+   echo "Error: NVM is not installed or not in PATH" >&2
+   exit 1
+fi

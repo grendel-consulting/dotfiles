@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+if command -v subl >/dev/null 2>&1; then
+    # Ensure we install Package Control and core plugins; we configure and license these through template files
+    subl --command "install_package_control"
+    subl --command "advanced_install_package {\"packages\": \"EditorConfig,Package Control,PackageDev,Sesame,Theme - Monokai Pro\"}"
+fi
