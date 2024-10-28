@@ -11,7 +11,7 @@ alias please='sudo $(fc -nl -1)' # Repeat last command with sudo
 # use 'brew cu' with '--all'
 alias freshbrew='brew update && brew upgrade && brew cu --yes --cleanup && mas upgrade && brew cleanup'
 
-alias freshsso='granted sso populate --prefix org_ --sso-region eu-west-1 https://grendel-consulting.awsapps.com/start/'
+alias freshsso='granted sso populate --prefix org_ --sso-region eu-west-1 {{ onepasswordRead "op://Control Tower/AWS Perimeter/SSO Start URL" "grendel.1password.com" }}'
 
 if command -v eza > /dev/null; then
     alias ld='eza -lD'
