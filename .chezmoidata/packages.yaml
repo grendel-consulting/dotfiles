@@ -3,16 +3,19 @@ packages:
     taps:
     - 1password/tap
     - buo/cask-upgrade
+    - common-fate/granted
     - kaos/shell
     - turbot/tap
     - warrensbox/tap
     brews:
     - antigen
+    - awscli
     # - atuin
     - bash
     - bash-completion
     - bat
     - bats-core
+    - common-fate/granted/granted
     - difftastic
     # - direnv
     - fzf

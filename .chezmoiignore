@@ -37,7 +37,7 @@ Applications
 Desktop
 Documents
 Downloads
-# Library
+Library
 Movies
 Music
 Pictures/*
@@ -47,7 +47,12 @@ Public
 Workspace/Projects/*
 Workspace/Scratch/*
 
+.aws/**
+!.aws/config
+.docker
 .flowpipe
+.granted/**
+!.granted/config
 .pipes
 .powerpipe
 .steampipe

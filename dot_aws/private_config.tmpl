@@ -1,0 +1,9 @@
+[sso-session heorot]
+sso_start_url = https://grendel-consulting.awsapps.com/start/
+sso_region = eu-west-1
+sso_registration_scopes = sso:account:access
+
+[default]
+sso_session = {{ .hostname }}
+sso_account_id = {{ onepasswordRead "op://Control Tower/AWS Perimeter/AWS Account ID" "grendel.1password.com" }}
+sso_role_name = AWSAdministratorAccess

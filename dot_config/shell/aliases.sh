@@ -1,14 +1,17 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 alias main='git checkout main && git fetch && git pull origin main && git branch --merged main | grep -v "^\* main" | xargs -n 1 -r git branch -d'
+# shellcheck disable=SC2154
 alias remain='for repo in ~/Workspace/Projects/.* ~/Workspace/Projects/*/ ; do if [ -d "$repo/.git" ]; then ( cd $repo && echo "Refreshing --------> $repo" && main ); fi; done'
 alias uncommit='git reset --soft HEAD~1'
 
 alias please='sudo $(fc -nl -1)' # Repeat last command with sudo
 
-# Does not force upgrade formulae where auto-updating is switched on; if required 
+# Does not force upgrade formulae where auto-updating is switched on; if required
 # use 'brew cu' with '--all'
 alias freshbrew='brew update && brew upgrade && brew cu --yes --cleanup && mas upgrade && brew cleanup'
+
+alias freshsso='granted sso populate --prefix org_ --sso-region eu-west-1 https://grendel-consulting.awsapps.com/start/'
 
 if command -v eza > /dev/null; then
     alias ld='eza -lD'
