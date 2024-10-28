@@ -18,7 +18,7 @@ sudo scutil --set HostName "{{ .hostname }}"
 sudo scutil --set LocalHostName "{{ .hostname }}"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "{{ .hostname }}"
 
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "'"{{ .wallpaper }}"'"' 
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "'"{{ .wallpaper }}"'"'
 
 ###############################################################################
 # Dock
@@ -52,7 +52,7 @@ killall Dock &>/dev/null
 defaults write com.apple.screencapture location "~/Pictures/Screenshots"
 
 ###############################################################################
-# Finder 
+# Finder
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"   # Display the 'List' view by default
 defaults write com.apple.finder _FXSortFoldersFirst -bool true        # Display folders then files when sorting by name
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true       # Show file extensions
