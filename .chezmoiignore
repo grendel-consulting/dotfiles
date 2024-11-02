@@ -46,6 +46,8 @@ Pictures/Screenshots/*
 Public
 Workspace/Projects/*
 Workspace/Scratch/*
+Workspace/Stubs/*
+Workspace/*
 
 .aws/**
 !.aws/config

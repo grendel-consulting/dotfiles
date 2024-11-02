@@ -43,6 +43,7 @@ packages:
     - uv
     - warrensbox/tap/tfswitch
     - yq
+    - zizmor
     - zoxide
     - zsh
     casks:
