@@ -1,4 +1,5 @@
 # Dotfiles for Grendel Consulting
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/grendel-consulting/dotfiles/badge)](https://scorecard.dev/viewer/?uri=github.com/grendel-consulting/{repo})
 
 Configuration and settings to rapidly bootstrap a new machine using [Chezmoi](https://www.chezmoi.io/)
 
