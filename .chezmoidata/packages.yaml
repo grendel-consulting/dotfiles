@@ -8,6 +8,7 @@ packages:
     - turbot/tap
     - warrensbox/tap
     brews:
+    - asciinema
     - antigen
     - awscli
     # - atuin
@@ -32,6 +33,7 @@ packages:
     - nano
     - pre-commit
     - pnpm
+    - scc
     - shellcheck
     - starship
     - tflint
@@ -57,6 +59,7 @@ packages:
     - google-chrome
     - iterm2
     - jordanbaird-ice
+    - privileges
     - rectangle
     - remember-the-milk
     - sublime-text
