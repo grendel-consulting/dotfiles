@@ -49,8 +49,9 @@ Workspace/Scratch/*
 Workspace/Stubs/*
 Workspace/*
 
-.aws/**
+.aws/*
 !.aws/config
+!.aws/cli
 .docker
 .flowpipe
 .granted/**
