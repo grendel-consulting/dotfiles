@@ -6,7 +6,8 @@ export PAGER="less"
 export GOBIN="$(go env GOPATH)/bin"
 export PATH="$GOBIN:$PATH"
 
-export FPATH="/usr/share/zsh/site-functions:/usr/share/zsh/5.9/functions:$FPATH"
+ZSH_VERSION=$(zsh --version | cut -d' ' -f2 | cut -d'.' -f1,2)
+export FPATH="/usr/share/zsh/site-functions:/usr/share/zsh/$ZSH_VERSION/functions:$FPATH"
 
 export NVM_AUTO_USE=true
 export SSH_AUTH_SOCK="$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock"
