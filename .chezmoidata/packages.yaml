@@ -35,6 +35,7 @@ packages:
     - pnpm
     - scc
     - shellcheck
+    - slides
     - starship
     - tflint
     - tldr
