@@ -42,6 +42,8 @@ You may need to launch tools first time to configure launch on startup and check
 
 You may need to explicitly grant permissions to various tools: Flux, Ice, Rectangle
 
+You may opt to install the Kolide Launcher agent
+
 ### Maintenance
 
 Regular maintenance tasks should be handled through scripts here too.

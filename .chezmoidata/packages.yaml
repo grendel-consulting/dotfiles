@@ -67,6 +67,8 @@ packages:
     - visual-studio-code
     - zoom
     mas:
+      - name: HP Smart for Desktop
+        id: 1474276998
       - name: Slack for Desktop
         id: 803453959
       - name: WhatsApp Messenger
