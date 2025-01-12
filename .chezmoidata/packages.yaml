@@ -57,6 +57,7 @@ packages:
     - docker
     - flux
     - font-caskaydia-cove-nerd-font
+    - ghostty
     - google-chrome
     - iterm2
     - jordanbaird-ice

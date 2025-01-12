@@ -3,7 +3,7 @@
 alias main='git checkout main && git fetch && git pull origin main && git branch --merged main | grep -v "^\* main" | xargs -n 1 -r git branch -d'
 alias repos='gh repo list grendel-consulting --no-archived --json name,owner --jq '\''.[] | .owner.login+"/"+.name'\'' | sort'
 # shellcheck disable=SC2154
-alias remain='for repo in ~/Workspace/Projects/.* ~/Workspace/Projects/*/ ; do if [ -d "$repo/.git" ]; then ( cd $repo && echo "Refreshing --------> \u001b[36m$repo\u001b[30m" && main ); fi; done'
+alias remain='for repo in ~/Workspace/Projects/.* ~/Workspace/Projects/*/ ; do if [ -d "$repo/.git" ]; then ( cd $repo && echo "Refreshing --------> \u001b[36m$repo\u001b[37m" && main ); fi; done'
 alias uncommit='git reset --soft HEAD~1'
 
 alias please='sudo $(fc -nl -1)' # Repeat last command with sudo
@@ -37,3 +37,8 @@ alias lock='pmset displaysleepnow'
 alias chrome='open -a Google\ Chrome'
 alias safari='open -a Safari'
 alias browse='open'
+
+alias -g G='| grep'
+alias -g H='| head'
+alias -g T='| tail'
+alias -g CP='| pbcopy'
