@@ -60,6 +60,7 @@ packages:
     - flux
     - font-caskaydia-cove-nerd-font
     - ghostty
+    - github
     - google-chrome
     - iterm2
     - jordanbaird-ice
