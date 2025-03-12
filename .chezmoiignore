@@ -60,6 +60,7 @@ Workspace/*
 .powerpipe
 .steampipe
 !.steampipe/config/kolide.spc
+.tailpipe
 
 # Bootstraps homebrew manually
 .zprofile
