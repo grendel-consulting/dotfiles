@@ -5,7 +5,7 @@ Configuration and settings to rapidly bootstrap a new machine using [Chezmoi](ht
 
 We're using [ZSH](https://en.wikipedia.org/wiki/Z_shell) with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/) for plugins and [Antigen](https://github.com/zsh-users/antigen) for plugin management. Applications, tools and utiliies rely on [Homebrew](https://brew.sh/) for package management.
 
-Our shell is [Starship](https://starship.rs/), running in [iTerm2](https://iterm2.com/) and [Visual Studio Code](https://code.visualstudio.com/) terminals, with a fallback setup for macOS Terminal running `bash`. We're using modern alternatives to `cd`, `cat` and `ls`.
+Our shell is [Starship](https://starship.rs/), running in [Ghostty](https://ghostty.org/), [iTerm2](https://iterm2.com/) and [Visual Studio Code](https://code.visualstudio.com/) terminals, with a fallback setup for macOS Terminal running `bash`. We're using modern alternatives to `cd`, `cat` and `ls`.
 
 Of course, secrets stay in [1Password](https://developer.1password.com/docs/cli), which also handles SSH key management and commit signing.
 
