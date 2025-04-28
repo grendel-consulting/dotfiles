@@ -4,6 +4,7 @@ packages:
     - 1password/tap
     - buo/cask-upgrade
     - common-fate/granted
+    - goreleaser/tap
     - kaos/shell
     - turbot/tap
     - warrensbox/tap
@@ -26,6 +27,7 @@ packages:
     - git
     - go
     - golangci-lint
+    - goreleaser/tap/goreleaser
     - httpie
     - jq
     - kaos/shell/bats-assert
