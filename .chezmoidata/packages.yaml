@@ -27,7 +27,6 @@ packages:
     - git
     - go
     - golangci-lint
-    - goreleaser/tap/goreleaser
     - httpie
     - jq
     - kaos/shell/bats-assert
@@ -64,6 +63,7 @@ packages:
     - ghostty
     - github
     - google-chrome
+    - goreleaser
     - iterm2
     - jordanbaird-ice
     - obsidian
