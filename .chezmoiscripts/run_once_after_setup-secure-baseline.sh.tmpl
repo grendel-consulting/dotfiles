@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Based on https://mac.install.guide/mac-setup/ and https://github.com/mathiasbynens/dotfiles/blob/main/.macos
+set -euo pipefail
+
+echo "Enabling Firewall"
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw \
+  --setblockall off \
+  --setallowsigned on \
+  --setallowsignedapp on \
+  --setstealthmode on \
+  --setglobalstate on
