@@ -45,6 +45,7 @@ source $DOTSCRIPTS/aliases.sh
 eval "$(op completion zsh)"; compdef _op op
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
 # Sign-in to 1Password if no session
 if ! op whoami >/dev/null 2>&1; then

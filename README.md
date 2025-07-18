@@ -44,6 +44,8 @@ You may need to explicitly grant permissions to various tools: Flux, Ice, Rectan
 
 You may opt to install the Kolide Launcher agent
 
+Whilst it is in preview, you will need to manually install Kiro
+
 ### Maintenance
 
 Regular maintenance tasks should be handled through scripts here too.
