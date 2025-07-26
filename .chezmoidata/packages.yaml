@@ -17,6 +17,7 @@ packages:
     - bash-completion
     - bat
     - bats-core
+    - cdktf
     - common-fate/granted/granted
     - detect-secrets
     - difftastic
