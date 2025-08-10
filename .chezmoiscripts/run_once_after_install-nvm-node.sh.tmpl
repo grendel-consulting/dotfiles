@@ -4,7 +4,8 @@ set -euo pipefail
 source "${NVM_DIR}/nvm.sh"
 
 if command -v nvm >/dev/null 2>&1; then
-    nvm install 'lts/iron'
+    nvm install 'lts/jod'
+    nvm use 'lts/jod'
 
     if command -v node >/dev/null 2>&1; then
         echo "Defaulting to Node $(node -v)" # with the side-effect of ensuring nvm loads node once
