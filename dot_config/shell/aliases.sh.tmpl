@@ -6,11 +6,12 @@ alias repos='gh repo list grendel-consulting --no-archived --json name,owner --j
 alias remain='for repo in ~/Workspace/Projects/.* ~/Workspace/Projects/*/ ; do if [ -d "$repo/.git" ]; then ( cd $repo && echo "Refreshing --------> \u001b[36m$repo\u001b[37m" && main ); fi; done'
 alias uncommit='git reset --soft HEAD~1'
 
+alias reload='source ~/.zshrc'
 alias please='sudo $(fc -nl -1)' # Repeat last command with sudo
 
 # Does not force upgrade formulae where auto-updating is switched on; if required
 # use 'brew cu' with '--all'
-alias freshbrew='brew update && brew upgrade && brew cu --yes --cleanup && mas upgrade && brew cleanup'
+alias freshbrew='PrivilegesCLI -a && brew update && brew upgrade && brew cu --yes --cleanup && mas upgrade && brew cleanup && omz update'
 
 alias freshsso='granted sso populate --prefix org_ --sso-region eu-west-1 {{ onepasswordRead "op://Control Tower/AWS Perimeter/SSO Start URL" "grendel.1password.com" }}'
 
