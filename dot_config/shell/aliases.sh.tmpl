@@ -11,7 +11,45 @@ alias please='sudo $(fc -nl -1)' # Repeat last command with sudo
 
 # Does not force upgrade formulae where auto-updating is switched on; if required
 # use 'brew cu' with '--all'
-alias freshbrew='PrivilegesCLI -a && brew update && brew upgrade && brew cu --yes --cleanup && mas upgrade && brew cleanup && omz update'
+# Replace the old alias with a shell function that safely elevates and de-escalates,
+# and guards against missing commands.
+
+freshbrew() {
+  local became_admin=0 status=0
+
+  # Elevate only if PrivilegesCLI exists and the user is not already an admin
+  if command -v PrivilegesCLI >/dev/null 2>&1; then
+    if ! dsmemberutil checkmembership -U "$USER" -G admin >/dev/null 2>&1; then
+      if PrivilegesCLI -a; then
+        became_admin=1
+      fi
+    fi
+  fi
+
+  # Run updates, but skip or fallback if optional tools are missing
+  brew update \
+    && brew upgrade \
+    && if brew tap | grep -qx "buo/cask-upgrade"; then \
+         brew cu --yes --cleanup; \
+       else \
+         brew upgrade --cask; \
+       fi \
+    && if command -v mas >/dev/null 2>&1; then \
+         mas upgrade || echo "mas: not logged in; skipping"; \
+       fi \
+    && brew cleanup \
+    && if command -v omz >/dev/null 2>&1; then \
+         omz update; \
+       fi
+  status=$?
+
+  # Always drop back to the original privilege level if we elevated
+  if [ "$became_admin" -eq 1 ] && command -v PrivilegesCLI >/dev/null 2>&1; then
+    PrivilegesCLI -d
+  fi
+
+  return $status
+}
 
 alias freshsso='granted sso populate --prefix org_ --sso-region eu-west-1 {{ onepasswordRead "op://Control Tower/AWS Perimeter/SSO Start URL" "grendel.1password.com" }}'
 
