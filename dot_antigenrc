@@ -1,0 +1,23 @@
+antigen use oh-my-zsh
+
+antigen bundles <<EOBUNDLES
+  aws
+  colored-man-pages
+  command-not-found
+  fzf
+  iterm2
+  git
+  starship
+  sublime
+  tldr
+  zoxide
+
+  zsh-users/zsh-apple-touchbar
+  zsh-users/zsh-autosuggestions
+  zsh-users/zsh-completions
+  zsh-users/zsh-syntax-highlighting
+  lukechilds/zsh-nvm
+  lukechilds/zsh-better-npm-completion
+EOBUNDLES
+
+antigen apply
