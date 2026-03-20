@@ -2,7 +2,7 @@ export DOTSCRIPTS="$HOME/.config/shell"
 export EDITOR="nano"
 [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ] && export VISUAL="code --wait"
 export PAGER="less"
-export LC_ALL=$LANG
+export LC_ALL="${LANG:-en_GB.UTF-8}"
 
 export GOBIN="$(go env GOPATH)/bin"
 export PNPMBIN="$HOME/Library/pnpm"
@@ -18,7 +18,7 @@ export TF_PRODUCT="terraform"
 export ZOXIDE_CMD_OVERRIDE="cd"
 
 source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
-zstyle :omz:plugins:iterm2 shell-integration yes #?
+zstyle :omz:plugins:iterm2 shell-integration yes
 antigen init $HOME/.antigenrc
 
 source $HOME/.config/op/plugins.sh
